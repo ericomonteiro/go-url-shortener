@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener - All Links</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container links-container">
+        <h1>All Short Links</h1>
+        <div class="nav-links">
+            <a href="/" class="nav-link">Home</a>
+            <a href="/links.html" class="nav-link active">All Links</a>
+        </div>
+        
+        <div class="filters">
+            <div class="filter-group">
+                <label for="shortUrlFilter">Short URL:</label>
+                <input type="text" id="shortUrlFilter" placeholder="Filter by short URL...">
+            </div>
+            <div class="filter-group">
+                <label for="destinyUrlFilter">Destination URL:</label>
+                <input type="text" id="destinyUrlFilter" placeholder="Filter by destination URL...">
+            </div>
+        </div>
+        
+        <div class="table-container">
+            <table id="linksTable">
+                <thead>
+                    <tr>
+                        <th data-sort="shortUrl" class="sortable">Short Link <span class="sort-icon">↕</span></th>
+                        <th data-sort="destinyUrl" class="sortable">Destination Link <span class="sort-icon">↕</span></th>
+                        <th data-sort="clicks" class="sortable">Clicks <span class="sort-icon">↕</span></th>
+                    </tr>
+                </thead>
+                <tbody id="linksTableBody">
+                    <!-- Links will be populated here -->
+                </tbody>
+            </table>
+        </div>
+        <div id="loading" class="loading">Loading...</div>
+        <div id="error" class="error"></div>
+    </div>
+    <script src="links.js"></script>
+</body>
+</html>
